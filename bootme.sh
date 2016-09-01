@@ -15,9 +15,17 @@ hostname=$(hostname -f)
 
 ### Code start ###
 if [ "$(id -u)" != "0" ]; then
-  echo "This script must be run as root." >&2
+  echo "This script must be run as root."
   exit 1
 fi
+
+if [[ $hostname == *"."* ]]
+  echo "Hostname OK"
+else
+  echo "Please configure host nad domain name, test using 'hostname -f'"
+  exit 1
+fi
+
 
 if [ "$#" -gt 0 ]; then
    if [ "$1" = 3 ]; then
