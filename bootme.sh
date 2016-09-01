@@ -26,7 +26,6 @@ else
   exit 1
 fi
 
-
 if [ "$#" -gt 0 ]; then
    if [ "$1" = 3 ]; then
      PUPPETMAJOR=3
@@ -89,6 +88,14 @@ EOF
 
 # change certname to hostname
 sed -i "s/^certname          = dummyhostname/certname          = $hostname/" /etc/puppetlabs/puppet/puppet.conf
+
+# add puppetmaster to /etc/hosts
+if grep -q stargazer-server1 /etc/hosts; then
+  echo "stargazer-server1 already in hostfile"
+else
+  echo "Adding stargazer-server1 to  hostfile"
+  cat '172.16.75.5     stargazer-server1.naturalis.nl stargazer-server1' >> /etc/hosts
+fi
 
 # run puppet
 echo "Run puppet agent"
