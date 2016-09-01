@@ -80,7 +80,7 @@ usecacheonfailure = true
 EOF
 
 # change certname to hostname
-sed -i "s/^certname          = dummyhostname/certname          = $hostname/" /etc/puppet/puppet.conf
+sed -i "s/^certname          = dummyhostname/certname          = $hostname/" /etc/puppetlabs/puppet/puppet.conf
 
 # run puppet
 echo "Run puppet agent"
