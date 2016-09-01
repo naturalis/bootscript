@@ -49,7 +49,7 @@ if which apt-get > /dev/null 2>&1; then
     echo "Using yum"
 fi
 
-apt-get install git libaugeas-ruby -y -q || yum install -y git
+apt-get install git -y -q
 
 # get or update repo
 if [ -d /root/bootscript ]; then
