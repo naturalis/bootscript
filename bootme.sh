@@ -22,7 +22,7 @@ fi
 if [[ $hostname == *"."* ]]
   echo "Hostname OK"
 else
-  echo "Please configure host nad domain name, test using 'hostname -f'"
+  echo "Please configure host and domain name, test using 'hostname -f'"
   exit 1
 fi
 
