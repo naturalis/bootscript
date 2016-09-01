@@ -94,7 +94,7 @@ if grep -q stargazer-server1 /etc/hosts; then
   echo "stargazer-server1 already in hostfile"
 else
   echo "Adding stargazer-server1 to  hostfile"
-  cat '172.16.75.5     stargazer-server1.naturalis.nl stargazer-server1' >> /etc/hosts
+  echo '172.16.75.5     stargazer-server1.naturalis.nl stargazer-server1' >> /etc/hosts
 fi
 
 # run puppet
