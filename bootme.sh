@@ -19,7 +19,7 @@ if [ "$(id -u)" != "0" ]; then
   exit 1
 fi
 
-if [[ $hostname == *"."* ]]
+if [[ $hostname == *"."* ]]; then
   echo "Hostname OK"
 else
   echo "Please configure host and domain name, test using 'hostname -f'"
