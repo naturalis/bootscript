@@ -3,7 +3,8 @@
 # This script installs puppet 3.x or 4.x and configures it for the stargazer-server1.naturalis.nl puppetmaster
 #
 # Usage:
-# Ubuntu / Debian: wget https://raw.githubusercontent.com/naturalis/bootscript/master/bootme.sh; bash bootme.sh
+# Ubuntu 14.04 / Debian: wget https://raw.githubusercontent.com/naturalis/bootscript/master/bootme.sh; bash bootme.sh
+# Ubuntu 16.04 / Debian: curl https://raw.githubusercontent.com/naturalis/bootscript/master/bootme.sh -o bootme.sh; sudo bash bootme.sh
 #
 # Red Hat / CentOS: curl https://raw.githubusercontent.com/naturalis/bootscript/master/bootme.sh -o bootme.sh; bash bootme.sh
 # Options: add 3 as parameter to install 4.x release
